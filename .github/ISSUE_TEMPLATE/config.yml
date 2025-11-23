@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Linear Project Board
+    url: https://linear.app/
+    about: View our project roadmap and track issues in Linear
+  - name: Documentation
+    url: https://template-sample.readthedocs.io
+    about: Check our documentation for usage guides and API reference
+  - name: Discussions
+    url: https://github.com/ByronWilliamsCPA/template_sample/discussions
+    about: Ask questions and share ideas in GitHub Discussions
