@@ -1,6 +1,6 @@
 {
   "template": "/home/byron/dev/cookiecutter-python-template",
-  "commit": "d400df93608db6c21b2a9cc45aaf48f8e1ae481f",
+  "commit": "e1d2b76e6170bb5d1fe2e0b2a8a879452fa1fd05",
   "checkout": "master",
   "context": {
     "cookiecutter": {
@@ -89,7 +89,7 @@
       "docs_url": "https://template-sample.readthedocs.io",
       "pypi_package_name": "template-sample",
       "_template": "/home/byron/dev/cookiecutter-python-template",
-      "_commit": "d400df93608db6c21b2a9cc45aaf48f8e1ae481f"
+      "_commit": "e1d2b76e6170bb5d1fe2e0b2a8a879452fa1fd05"
     }
   },
   "directory": null
