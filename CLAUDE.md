@@ -36,6 +36,7 @@ This project serves as the primary test point for the [cookiecutter-python-templ
 - Append additional feedback to the existing day's file
 
 **Feedback File Format**:
+
 ```markdown
 # Template Feedback - MM/DD/YYYY
 
