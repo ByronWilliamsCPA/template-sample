@@ -1,0 +1,20 @@
+diff a/docs/planning/roadmap.md b/docs/planning/roadmap.md	(rejected hunks)
+@@ -1,4 +1,17 @@
+-# Development Roadmap: {{cookiecutter.project_name}}
++---
++title: "Template Sample - Development Roadmap"
++schema_type: planning
++status: draft
++owner: core-maintainer
++purpose: "Document the phased implementation plan and milestones."
++tags:
++  - planning
++  - roadmap
++component: Strategy
++source: "/plan command generation"
++---
++
++# Development Roadmap: Template Sample
+ 
+ > **Status**: Awaiting Generation
+ 

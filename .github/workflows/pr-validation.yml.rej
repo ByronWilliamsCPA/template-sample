@@ -1,0 +1,9 @@
+diff a/.github/workflows/pr-validation.yml b/.github/workflows/pr-validation.yml	(rejected hunks)
+@@ -69,6 +69,7 @@ jobs:
+         with:
+           enable-cache: true
+           cache-dependency-glob: "uv.lock"
++          cache-local-path: ".uv-cache"
+ 
+       - name: Install dependencies
+         run: uv sync --all-extras

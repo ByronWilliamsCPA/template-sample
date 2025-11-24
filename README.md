@@ -9,11 +9,11 @@
 [![REUSE Compliance](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/reuse.yml/badge.svg)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/reuse.yml)
 
 ## CI/CD Status
-[![CI Pipeline](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/ci.yml?query=branch%3Amaster)
-[![Security Analysis](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/security-analysis.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/security-analysis.yml?query=branch%3Amaster)
-[![Documentation](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/docs.yml?query=branch%3Amaster)
-[![ClusterFuzzLite](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/cifuzzy.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/cifuzzy.yml?query=branch%3Amaster)
-[![SBOM & Security Scan](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/sbom.yml/badge.svg?branch=master)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/sbom.yml?query=branch%3Amaster)
+[![CI Pipeline](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/ci.yml?query=branch%3Amain)
+[![Security Analysis](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/security-analysis.yml/badge.svg?branch=main)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/security-analysis.yml?query=branch%3Amain)
+[![Documentation](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/docs.yml?query=branch%3Amain)
+[![ClusterFuzzLite](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/cifuzzy.yml/badge.svg?branch=main)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/cifuzzy.yml?query=branch%3Amain)
+[![SBOM & Security Scan](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/sbom.yml/badge.svg?branch=main)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/sbom.yml?query=branch%3Amain)
 [![PR Validation](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/pr-validation.yml)
 [![Release](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/release.yml/badge.svg)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/release.yml)
 [![PyPI Publish](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/publish-pypi.yml/badge.svg)](https://github.com/ByronWilliamsCPA/template_sample/actions/workflows/publish-pypi.yml)

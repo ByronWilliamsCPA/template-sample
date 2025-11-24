@@ -1,13 +1,10 @@
-# CI/CD Pipeline - Calls Org-Level Reusable Workflow
-# This is a lightweight caller workflow that invokes the organization's
-# shared Python CI workflow with LLM governance integration.
+# CI/CD Pipeline
+# Runs tests, linting, type checking, and security scans.
 #
 # Features:
 #   - Standard quality checks (tests, linting, type checking)
-#   - LLM governance and assumption tag verification
-#   - Optional SonarCloud integration
-#   - Optional Codecov integration
 #   - Security scanning (Bandit, Safety)
+#   - Optional SonarCloud/Codecov integration
 name: CI
 
 on:
@@ -28,6 +25,7 @@ permissions:
   pull-requests: write
   checks: write
 
+# Uses org-level reusable workflow
 jobs:
   ci:
     name: CI Pipeline

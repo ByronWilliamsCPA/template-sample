@@ -1,0 +1,20 @@
+diff a/docs/planning/project-vision.md b/docs/planning/project-vision.md	(rejected hunks)
+@@ -1,4 +1,17 @@
+-# Project Vision & Scope: {{cookiecutter.project_name}}
++---
++title: "Template Sample - Project Vision & Scope"
++schema_type: planning
++status: draft
++owner: core-maintainer
++purpose: "Document the project vision, scope, and success criteria."
++tags:
++  - planning
++  - scope
++component: Strategy
++source: "/plan command generation"
++---
++
++# Project Vision & Scope: Template Sample
+ 
+ > **Status**: Awaiting Generation
+ 

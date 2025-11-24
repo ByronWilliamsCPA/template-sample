@@ -1,0 +1,110 @@
+diff a/docs/PROJECT_SETUP.md b/docs/PROJECT_SETUP.md	(rejected hunks)
+@@ -1,3 +1,15 @@
++---
++title: "Project Setup Guide"
++schema_type: common
++status: published
++owner: core-maintainer
++purpose: "Step-by-step guide for setting up the development environment."
++tags:
++  - guide
++  - installation
++  - development
++---
++
+ # Project Setup Guide
+ 
+ This guide covers everything you need to know after generating your project from the cookiecutter template. It includes manual setup steps, keeping your project updated, and managing your repository structure.
+@@ -31,8 +43,8 @@ Your project was generated with the following configuration:
+ 
+ ```bash
+ # Create a new repository on GitHub, then:
+-git remote add origin https://github.com/ByronWilliamsCPA/template_sample.git
+-git push -u origin master
++git remote add origin https://github.com/ByronWilliamsCPA/template-sample.git
++git push -u origin main
+ ```
+ 
+ ### 3. Install Dependencies
+@@ -381,8 +393,11 @@ Your project includes several GitHub Actions workflows:
+ |----------|------|---------|
+ | CI Pipeline | `ci.yml` | Tests, linting, type checking |
+ | Security Analysis | `security-analysis.yml` | Dependency scanning, CodeQL |
++| PR Validation | `pr-validation.yml` | Lock file and requirements sync validation |
+ | OpenSSF Scorecard | `scorecard.yml` | Supply chain security assessment |
+ | SBOM & Security Scan | `sbom.yml` | Software Bill of Materials generation |
++| Release | `release.yml` | Automated semantic versioning and releases |
++| Publish to PyPI | `publish-pypi.yml` | Package publishing to PyPI |
+ | Documentation | `docs.yml` | Build and deploy MkDocs |
+ | REUSE Compliance | `reuse.yml` | License compliance checking |
+ | ClusterFuzzLite | `cifuzzy.yml` | Continuous fuzzing |
+@@ -394,10 +409,24 @@ Set these in Repository Settings > Secrets and variables > Actions:
+ 
+ | Secret | Required For | How to Get |
+ |--------|--------------|------------|
++| `PYPI_API_TOKEN` | PyPI publishing | pypi.org > Account > API tokens (or use Trusted Publishing) |
+ | `CODECOV_TOKEN` | Codecov uploads | codecov.io > Settings > Upload Token |
+ | `SONAR_TOKEN` | SonarCloud analysis | sonarcloud.io > Account > Security |
+ | `SCORECARD_TOKEN` | Scorecard (optional) | GitHub PAT with repo scope |
+ 
++### PyPI Trusted Publishing (Recommended)
++
++Instead of using API tokens, configure trusted publishing for enhanced security:
++
++1. Go to pypi.org and create or manage your project
++2. Navigate to "Publishing" settings
++3. Add a new trusted publisher with:
++   - **Owner**: `ByronWilliamsCPA`
++   - **Repository**: `template-sample`
++   - **Workflow**: `publish-pypi.yml`
++   - **Environment**: `pypi`
++4. No `PYPI_API_TOKEN` secret is needed with trusted publishing
++
+ ---
+ 
+ ## Badge Configuration
+@@ -433,10 +462,31 @@ After registration, add this badge to your README's "Quality & Security" section
+ 
+ ### Branch Protection Rules
+ 
+-Enable these on your default branch:
++You can configure branch protection either via script (recommended) or manually through the GitHub UI.
++
++#### Option 1: Automated Setup (Recommended)
++
++Use the included script to configure comprehensive branch protection:
++
++```bash
++# Set up branch protection with default settings
++uv run python scripts/setup_github_protection.py
++
++# Or specify custom settings
++uv run python scripts/setup_github_protection.py --enforce-admins --require-code-owner-reviews
++```
++
++The script configures:
++- Required pull request reviews before merging
++- Required status checks to pass
++- Enforce rules for administrators
++- Require signed commits
++- Dismiss stale reviews on new commits
++
++#### Option 2: Manual UI Setup
+ 
+ 1. Go to Repository Settings > Branches > Add rule
+-2. Apply to: `master` (or `main`)
++2. Apply to: `main`
+ 3. Enable:
+    - [x] Require a pull request before merging
+    - [x] Require status checks to pass
+@@ -446,8 +496,8 @@ Enable these on your default branch:
+ ### Required Status Checks
+ 
+ Add these as required checks:
+-- `test` (from CI workflow)
+-- `lint` (from CI workflow)
++- `CI / Test` (from CI workflow)
++- `CI / Lint` (from CI workflow)
+ - `codecov/patch`
+ - `SonarCloud Code Analysis`
+ 

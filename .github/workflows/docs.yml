@@ -1,6 +1,10 @@
-# Documentation - Calls Org-Level Reusable Workflow
-# This is a lightweight caller workflow that invokes the organization's
-# shared Python documentation workflow for MkDocs builds and deployments.
+# Documentation Workflow
+# Builds and deploys MkDocs documentation to GitHub Pages.
+#
+# Features:
+#   - MkDocs Material theme build
+#   - GitHub Pages deployment on push to main
+#   - PR preview builds
 name: Documentation
 
 on:
@@ -16,6 +20,12 @@ on:
       - 'mkdocs.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write  # For GitHub Pages deployment
+  pages: write
+  id-token: write
+
+# Uses org-level reusable workflow
 jobs:
   docs:
     name: Build & Deploy Docs
@@ -23,8 +33,3 @@ jobs:
     with:
       python-version: '3.12'
       deploy-to-pages: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-
-permissions:
-  contents: write  # For GitHub Pages deployment
-  pages: write
-  id-token: write

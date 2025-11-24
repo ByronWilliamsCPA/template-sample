@@ -1,7 +1,7 @@
 {
   "template": "/home/byron/dev/cookiecutter-python-template",
-  "commit": "d400df93608db6c21b2a9cc45aaf48f8e1ae481f",
-  "checkout": "master",
+  "commit": "117d92a0039d63684d0d38024e771ebd3dcbb9d8",
+  "checkout": null,
   "context": {
     "cookiecutter": {
       "project_name": "Template Sample",
@@ -52,6 +52,8 @@
       "use_pre_commit": "yes",
       "_comment_cicd": "CI/CD Configuration (Gitleaks, OSV Scanner, Semgrep, TruffleHog always included for security)",
       "include_github_actions": "yes",
+      "use_org_workflows": "yes",
+      "_comment_org_workflows": "Use org-level reusable workflows (requires .github repo with shared workflows)",
       "include_semantic_release": "yes",
       "include_fuzzing": "yes",
       "include_codecov": "yes",

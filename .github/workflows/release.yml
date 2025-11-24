@@ -1,6 +1,5 @@
-# Release Workflow - Calls Org-Level Reusable Workflow
-# This is a lightweight caller workflow that invokes the organization's
-# shared Python release workflow.
+# Release Workflow
+# Handles automated releases with semantic versioning or manual tag-based releases.
 #
 # Features:
 #   - Pre-release testing
@@ -39,6 +38,7 @@ permissions:
   id-token: write
   attestations: write
 
+# Uses org-level reusable workflow
 jobs:
   release:
     name: Release Pipeline
@@ -52,3 +52,4 @@ jobs:
       publish-to-pypi: true
       pypi-package-name: 'template-sample'
       run-tests: true
+
