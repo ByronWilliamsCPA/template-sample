@@ -21,6 +21,48 @@
 **Repository**: https://github.com/ByronWilliamsCPA/template-sample
 **Created**: 2025-11-22
 
+## Template Feedback Tracking (CRITICAL)
+
+This project serves as the primary test point for the [cookiecutter-python-template](https://github.com/ByronWilliamsCPA/cookiecutter-python-template). All template-related feedback MUST be documented.
+
+### Feedback Requirements
+
+**When to Document**: Whenever you identify an issue with the template or need to make a change that should be reflected in the source template, document it in a feedback file.
+
+**Location**: `template_feedback/`
+
+**Naming Convention**: `MMDDYYYY_template_feedback.md`
+- Create a new file the first time feedback is provided each day
+- Append additional feedback to the existing day's file
+
+**Feedback File Format**:
+
+```markdown
+# Template Feedback - MM/DD/YYYY
+
+## Issue 1: [Brief Title]
+**Category**: [Bug | Enhancement | Documentation | Configuration]
+**Severity**: [Critical | High | Medium | Low]
+**Files Affected**: [list of template files]
+
+### Description
+[Detailed description of the issue or change needed]
+
+### Suggested Fix
+[How the template should be modified]
+
+### Workaround Applied
+[Any temporary fix applied to this project]
+
+---
+```
+
+**Categories**:
+- **Bug**: Something broken or not working as expected
+- **Enhancement**: Improvement opportunity
+- **Documentation**: Missing or incorrect documentation
+- **Configuration**: Config file issues (pyproject.toml, CI workflows, etc.)
+
 ## Branch Workflow Requirement (CRITICAL)
 
 **NEVER work directly on the `main` branch.** Always create a feature branch before making any code changes.

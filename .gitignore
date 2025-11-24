@@ -282,3 +282,9 @@ output/
 # SonarCloud
 .scannerwork/
 .sonar/
+
+# Qlty cache symlinks (user-specific)
+.qlty/logs
+.qlty/out
+.qlty/plugin_cachedir
+.qlty/results
