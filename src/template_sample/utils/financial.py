@@ -1,5 +1,4 @@
 """Financial utilities module.
-"""
 
 CRITICAL: Always use Decimal for financial calculations to avoid floating-point errors.
 
