@@ -52,4 +52,3 @@ jobs:
       publish-to-pypi: true
       pypi-package-name: 'template-sample'
       run-tests: true
-
