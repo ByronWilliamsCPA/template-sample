@@ -92,5 +92,23 @@
       "_commit": "117d92a0039d63684d0d38024e771ebd3dcbb9d8"
     }
   },
-  "directory": null
+  "directory": null,
+  "skip": [
+    ".git/",
+    ".mypy_cache/",
+    ".pytest_cache/",
+    ".ruff_cache/",
+    ".venv/",
+    "venv/",
+    ".tox/",
+    "*.pyc",
+    "__pycache__/",
+    "*.egg-info/",
+    ".coverage",
+    "htmlcov/",
+    "dist/",
+    "build/",
+    ".qlty/",
+    ".sonarlint/"
+  ]
 }
