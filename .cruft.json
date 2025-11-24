@@ -1,7 +1,7 @@
 {
   "template": "/home/byron/dev/cookiecutter-python-template",
-  "commit": "117d92a0039d63684d0d38024e771ebd3dcbb9d8",
-  "checkout": "main",
+  "commit": "d400df93608db6c21b2a9cc45aaf48f8e1ae481f",
+  "checkout": "master",
   "context": {
     "cookiecutter": {
       "project_name": "Template Sample",
