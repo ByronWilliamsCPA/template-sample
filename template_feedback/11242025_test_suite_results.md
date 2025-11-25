@@ -319,4 +319,3 @@ The cruft template update was **successfully applied**, but revealed systematic 
 
 **Template Quality Score**: 6.5/10
 - Deductions for documentation errors, linting issues, coverage configuration
-

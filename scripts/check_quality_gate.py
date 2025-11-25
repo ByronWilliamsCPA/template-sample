@@ -130,7 +130,7 @@ class LLMGovernanceMapper:
     }
 
     @classmethod
-    def map_condition_to_tag(cls, metric_key: str, condition_status: str) -> Optional[str]:
+    def map_condition_to_tag(cls, metric_key: str, condition_status: str) -> str | None:
         """Map a quality gate condition to an LLM tag."""
         if condition_status == "OK":
             return None
@@ -142,7 +142,7 @@ class LLMGovernanceMapper:
         return None
 
     @classmethod
-    def map_issue_to_tag(cls, rule_key: str) -> Optional[str]:
+    def map_issue_to_tag(cls, rule_key: str) -> str | None:
         """Map a SonarQube rule to an LLM tag."""
         return cls.RULE_TO_TAG_MAP.get(rule_key)
 
